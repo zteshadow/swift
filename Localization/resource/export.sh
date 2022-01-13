@@ -8,18 +8,14 @@ set -euo pipefail
 # xcodebuild -exportLocalizations -localizationPath "export" -workspace Localization.xcworkspace -exportLanguage en
 #ARCHS=x86_64 ONLY_ACTIVE_ARCH=NO
 
-xcrun xcodebuild \
+xcrun xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO \
   -workspace "Localization.xcworkspace" \
   -scheme "Localization" \
-  -sdk iphoneos15.2 \
-  -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.2' \
-  -configuration Debug > /dev/null 2>&1
+  -configuration Debug
 
 xcrun xcodebuild \
   -workspace "Localization.xcworkspace" \
   -scheme "Localization" \
-  -sdk iphoneos15.2 \
-  -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.2' \
   -configuration Debug \
   -exportLocalizations \
   -localizationPath "export" \
