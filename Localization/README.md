@@ -6,17 +6,20 @@
 
 ## 3. 导出localization
 
-> 3.1 导出
-
+### 3.1 导出
 
 可以导出workspace中各个project的localization, 也可以导出全部, 入口地址: Product/Export Localizations/
-<img src="./resource/export.png" width="60%" height="60%" alt="Product/Export Localizations" align="center" />
+<div align=center><img src="./resource/export.png" width="80%" height="80%" alt="Product/Export Localizations"/></div>
 
->  3.2 可能的错误
+### 3.2 可能的错误
 
-<img src="./resource/error.png" width="60%" height="60%" alt="Product/Export Localizations" align="center" />
+<div align=center><img src="./resource/error.png" width="80%" height="80%" alt="Product/Export Localizations"/></div>
 
-> 3.3 
+Xcode这里有一个bug, 不支持根据依赖关系进行编译, 注意这个错误里面的`arm64`, 只需要手动编译一遍对应的架构即可.
+
+### 3.3 Fix
+
+
 
 # 4. 参考
 
