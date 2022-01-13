@@ -10,11 +10,11 @@
 
 
 可以导出workspace中各个project的localization, 也可以导出全部, 入口地址: Product/Export Localizations/
-![Product/Export Localizations/](./resource/export.png)
+<img src="./resource/export.png" width="60%" height="60%" alt="Product/Export Localizations" align="center" />
 
 >  3.2 可能的错误
 
-![Error](./resource/error.png)
+<img src="./resource/error.png" width="60%" height="60%" alt="Product/Export Localizations" align="center" />
 
 > 3.3 
 
