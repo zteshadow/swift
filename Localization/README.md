@@ -30,7 +30,7 @@ xcodebuild: error: Unable to build project for localization string extraction
 ```
 
 ### 3.3 Fix
-只需要手动编译一遍对应的架构`arm64`即可. 或者可以写个脚步先编译一遍工程[script](./resource/export.sh):
+只需要手动编译一遍对应的架构`arm64`即可. 或者可以写个脚步先编译一遍工程生成`arm64`架构[script](./resource/export.sh):
 
 ```bash
 #!/usr/bin/env bash
