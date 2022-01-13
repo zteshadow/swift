@@ -11,6 +11,8 @@
 		19236341278FD02D00A8F1D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19236340278FD02D00A8F1D2 /* ContentView.swift */; };
 		19236343278FD02E00A8F1D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19236342278FD02E00A8F1D2 /* Assets.xcassets */; };
 		19236346278FD02E00A8F1D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19236345278FD02E00A8F1D2 /* Preview Assets.xcassets */; };
+		19236393278FD33100A8F1D2 /* Module1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19236385278FD18F00A8F1D2 /* Module1.framework */; };
+		19236394278FD33400A8F1D2 /* Module2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1923638B278FD19B00A8F1D2 /* Module2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,20 @@
 			containerPortal = 19236386278FD19B00A8F1D2 /* Module2.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 19236370278FD16300A8F1D2;
+			remoteInfo = Module2;
+		};
+		1923638E278FD32800A8F1D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19236380278FD18F00A8F1D2 /* Module1.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 19236355278FD12700A8F1D2;
+			remoteInfo = Module1;
+		};
+		19236390278FD32C00A8F1D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19236386278FD19B00A8F1D2 /* Module2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1923636F278FD16300A8F1D2;
 			remoteInfo = Module2;
 		};
 /* End PBXContainerItemProxy section */
@@ -45,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19236394278FD33400A8F1D2 /* Module2.framework in Frameworks */,
+				19236393278FD33100A8F1D2 /* Module1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +76,7 @@
 				19236380278FD18F00A8F1D2 /* Module1.xcodeproj */,
 				1923633D278FD02D00A8F1D2 /* Localization */,
 				1923633C278FD02D00A8F1D2 /* Products */,
+				19236392278FD33100A8F1D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +123,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		19236392278FD33100A8F1D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,6 +144,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				19236391278FD32C00A8F1D2 /* PBXTargetDependency */,
+				1923638F278FD32800A8F1D2 /* PBXTargetDependency */,
 			);
 			name = Localization;
 			productName = Localization;
@@ -207,6 +235,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1923638F278FD32800A8F1D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Module1;
+			targetProxy = 1923638E278FD32800A8F1D2 /* PBXContainerItemProxy */;
+		};
+		19236391278FD32C00A8F1D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Module2;
+			targetProxy = 19236390278FD32C00A8F1D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		19236347278FD02E00A8F1D2 /* Debug */ = {

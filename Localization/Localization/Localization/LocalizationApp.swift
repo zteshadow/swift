@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import Module1
+import Module2
 
 @main
 struct LocalizationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VStack {
+                Module1View()
+                Module2View()
+            }
         }
     }
 }
