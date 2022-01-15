@@ -3,7 +3,7 @@
 ## 1. 添加字符串
 
 ## 2. 添加多语言支持
-
+添加字符串文件, 默认名称`Localizable.strings`
 ## 3. 导出localization
 
 ### 3.1 导出
@@ -57,6 +57,12 @@ xcrun xcodebuild -configuration Release \
   -localizationPath "export" \
   -exportLanguage en
 ```
+
+### 3.4 导出的目录
+
+Localized Contents: 自动提取的字符串 + 内置的`Localizable.strings`
+
+Source Contents: 内置的`Localizable.strings`
 
 # 4. 参考
 
