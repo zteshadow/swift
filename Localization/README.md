@@ -12,7 +12,6 @@
 ```bash
 xcrun xcodebuild \
   -workspace "Localization.xcworkspace" \
-  -scheme "Localization" \
   -exportLocalizations \
   -localizationPath "export" \
   -exportLanguage en \
@@ -20,32 +19,40 @@ xcrun xcodebuild \
   ...
 ```
 ### 3.2 可能的错误
+
+导出localization通常都会报莫名其妙的错误, 菜单导出的报错如下图:
+
 <div align=center><img src="./resource/error.png" width="80%" height="80%" alt="Product/Export Localizations"/></div>
 
-Xcode(13.2.1)这里有一个bug, 不会根据依赖关系编译工程, 注意这个错误里面的`arm64`.
+命令行错误如图:
+
 ```bash
 xcodebuild: error: Unable to build project for localization string extraction
 	Reason: Failed to build.
 	Please see the build logs for failure description.
 ```
 
+Xcode(13.2.1)的exportLocalizations有3个问题:
+- 无法处理依赖关系
+- 默认依赖`arm64`架构, 目前不知道如何设置, 解决的方法是手动编译时指定`ARCHS=arm64`
+- 默认`Release`模式, 同样不知道如何设置, 可以编译的时候指定`-configuration Release`
+
 ### 3.3 Fix
-只需要手动编译一遍对应的架构`arm64`即可. 或者可以写个脚步先编译一遍工程生成`arm64`架构[script](./resource/export.sh):
+解决的方案是手动编译一遍, 在编译时指定架构`archs=arm64`, 指定模式`-configuration Release`
+
+[script](./resource/export.sh):
 
 ```bash
 #!/usr/bin/env bash
 
 set -euo pipefail
 
-xcrun xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO \
+xcrun xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO -configuration Release \
   -workspace "Localization.xcworkspace" \
-  -scheme "Localization" \
-  -configuration Debug > /dev/null 2>&1
+  -scheme "Localization" > /dev/null 2>&1
 
-xcrun xcodebuild \
-  -workspace "Localization.xcworkspace" \
-  -scheme "Localization" \
-  -configuration Debug \
+xcrun xcodebuild -configuration Release \
+  -quiet \
   -exportLocalizations \
   -localizationPath "export" \
   -exportLanguage en
@@ -54,3 +61,5 @@ xcrun xcodebuild \
 # 4. 参考
 
 [官方文档](https://developer.apple.com/documentation/xcode/exporting-localizations)
+
+[WWDC2021](https://developer.apple.com/videos/play/wwdc2021/10220/)
