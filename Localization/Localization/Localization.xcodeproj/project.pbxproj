@@ -89,7 +89,6 @@
 		19236332278FD02D00A8F1D2 = {
 			isa = PBXGroup;
 			children = (
-				19F85833279518CA0044129B /* Supporting */,
 				19236386278FD19B00A8F1D2 /* Module2.xcodeproj */,
 				19236380278FD18F00A8F1D2 /* Module1.xcodeproj */,
 				1923633D278FD02D00A8F1D2 /* Localization */,
@@ -146,14 +145,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		19F85833279518CA0044129B /* Supporting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Supporting;
-			path = ../Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
