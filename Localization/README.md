@@ -1,6 +1,7 @@
 # Localization
 
 ## 0. 添加多语言支持的正确步骤
+
 - 使用合适的字符串格式, 用SwiftUI或者UIKit构建界面
 - 导出localization
 - 导入xliff文件
@@ -8,6 +9,8 @@
 - 整理添加可能的Plura字符串
 
 后续只需要重复2 -5 步骤即可. 下面详细介绍每个步骤.
+
+[官方文档](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW1)
 
 ## 1. 添加字符串
 > 1. UI中使用字符串
@@ -36,7 +39,7 @@ var text2: LocalizedStringKey = "Hello text2 from module1"
 
 可以导出workspace中各个project的localization, 也可以导出全部, 菜单入口: Product/Export Localizations/, 指令:
 ```bash
-xcrun xcodebuild \
+xcodebuild \
   -workspace "Localization.xcworkspace" \
   -exportLocalizations \
   -localizationPath "export" \
@@ -81,6 +84,9 @@ xcodebuild -quiet \
   -localizationPath "export" \
   -exportLanguage en
 ```
+
+## 3. 导入
+
 
 # 4. 参考
 
