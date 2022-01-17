@@ -10,7 +10,7 @@ import SwiftUI
 public struct Module2View: View {
     public init() {}
     public var body: some View {
-        Text("Hello from module2!")
+        Text("Hello from module2!", comment: "Label say hello from module2")
     }
 }
 
