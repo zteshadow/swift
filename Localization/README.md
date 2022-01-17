@@ -1,12 +1,38 @@
 # Localization
 
+## 0. 添加多语言支持的正确步骤
+- 使用合适的字符串格式, 用SwiftUI或者UIKit构建界面
+- 导出localization
+- 导入xliff文件
+- 添加多语言支持
+- 整理添加可能的Plura字符串
+
+后续只需要重复2 -5 步骤即可. 下面详细介绍每个步骤.
+
 ## 1. 添加字符串
+> 1. UI中使用字符串
 
-## 2. 添加多语言支持
-添加字符串文件, 默认名称`Localizable.strings`
-## 3. 导出localization
+```swift
+  VStack {
+      Text("Hello from module1!", bundle: .main, comment: "Label: show hello from module1")
+  }
+```
+> 2. ViewModule中使用字符串
 
-### 3.1 导出
+```swift
+var text1 = String(localized: "\(count) ticket(s)", bundle: .main, comment: "Label: quantities of tickets")
+```
+> 3. ViewModule中使用字符串
+
+```swift
+var text2: LocalizedStringKey = "Hello text2 from module1"
+```
+注意方法3无法指定bundle, 方法1和方法2可以, 因此如果是定义在framework中的代码, 要使用自己的bundle, 可以使用方法1和2.
+
+
+## 2. 导出localization
+
+### 2.1 导出
 
 可以导出workspace中各个project的localization, 也可以导出全部, 菜单入口: Product/Export Localizations/, 指令:
 ```bash
@@ -18,7 +44,7 @@ xcrun xcodebuild \
   -exportLanguage de \
   ...
 ```
-### 3.2 可能的错误
+### 2.2 可能的错误
 
 导出localization通常都会报莫名其妙的错误, 菜单导出的报错如下图:
 
@@ -32,12 +58,11 @@ xcodebuild: error: Unable to build project for localization string extraction
 	Please see the build logs for failure description.
 ```
 
-Xcode(13.2.1)的exportLocalizations有3个问题:
-- 无法处理依赖关系
-- 默认依赖`arm64`架构, 目前不知道如何设置, 解决的方法是手动编译时指定`ARCHS=arm64`
-- 默认`Release`模式, 同样不知道如何设置, 可以编译的时候指定`-configuration Release`
+Xcode(13.2.1)的exportLocalizations有2个问题:
+- 无法处理依赖关系, 导致编译错误
+- 默认依赖`arm64`架构, `Release`模式, 但是无法指定.
 
-### 3.3 Fix
+### 2.3 解决方案
 解决的方案是手动编译一遍, 在编译时指定架构`archs=arm64`, 指定模式`-configuration Release`
 
 [script](./resource/export.sh):
@@ -47,22 +72,15 @@ Xcode(13.2.1)的exportLocalizations有3个问题:
 
 set -euo pipefail
 
-xcrun xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO -configuration Release \
+xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO -configuration Release \
   -workspace "Localization.xcworkspace" \
   -scheme "Localization" > /dev/null 2>&1
 
-xcrun xcodebuild -configuration Release \
-  -quiet \
+xcodebuild -quiet \
   -exportLocalizations \
   -localizationPath "export" \
   -exportLanguage en
 ```
-
-### 3.4 导出的目录
-
-Localized Contents: 自动提取的字符串 + 内置的`Localizable.strings`
-
-Source Contents: 内置的`Localizable.strings`
 
 # 4. 参考
 
