@@ -1,6 +1,4 @@
 /* Label: quantities of tickets */
-"%lld ticket(s)" = "%lld ticket(s)";
 
-/* No comment provided by engineer. */
-"Hello from module1!" = "Hello from module1!";
+"Hello text2 from module1" = "hi text2";
 
