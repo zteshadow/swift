@@ -13,9 +13,10 @@ public struct Module1View: View {
     private var text2: LocalizedStringKey
 
     public init() {
-        text1 = String(localized: "\(count) ticket(s)", bundle: .module, comment: "Label: quantities of tickets")
+        text1 = String(localized: "\(count) ticket(s)", bundle: .main, comment: "Label: quantities of tickets")
         text2 = "Hello text2 from module1"
     }
+
     public var body: some View {
         VStack {
             Text("Hello from module1!", bundle: .main, comment: "Label: show hello from module1")
