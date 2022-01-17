@@ -8,9 +8,17 @@
 import SwiftUI
 
 public struct Module1View: View {
-    public init() {}
+    private var count = 3
+    private var text: String
+
+    public init() {
+        text = String(localized: "\(count) ticket(s)", comment: "Label: quantities of tickets")
+    }
     public var body: some View {
-        Text("Hello from module1!")
+        VStack {
+            Text("Hello from module1!")
+            Text(text)
+        }
     }
 }
 
