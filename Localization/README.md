@@ -115,7 +115,11 @@ cp -r export/en.xcloc/Source\ Contents/ ./
 
 ### 3.3 翻译导入
 
+从导出的en.xliff拷贝一份zh-Hans.xliff文件, 翻译里面的字符串, 注意修改`target`, 然后导入.
 
+```bash
+xcodebuild -workspace "Localization.xcworkspace" -importLocalizations -localizationPath ./zh-Hans.xliff
+```
 
 # 4. 参考
 
