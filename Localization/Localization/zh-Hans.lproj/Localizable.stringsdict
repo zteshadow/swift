@@ -12,12 +12,10 @@
 			<string>NSStringPluralRuleType</string>
 			<key>NSStringFormatValueTypeKey</key>
 			<string>lld</string>
-			<key>zero</key>
-			<string>No modules found</string>
-			<key>one</key>
-			<string>%lld module</string>
 			<key>other</key>
-			<string>%lld modules</string>
+			<string>%lld 模块</string>
+			<key>zero</key>
+			<string>没有模块</string>
 		</dict>
 	</dict>
 </dict>
