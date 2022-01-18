@@ -63,7 +63,7 @@ xcodebuild: error: Unable to build project for localization string extraction
 
 Xcode(13.2.1)的exportLocalizations有2个问题:
 - 无法处理依赖关系, 导致编译错误
-- 默认依赖`arm64`架构, `Release`模式, 但是无法指定.
+- 默认依赖`arm64`架构, `Release`模式(project设置有一项:`Use release for command-line build`, 指定scheme的除外), 但是无法指定.
 
 ### 2.3 解决方案
 解决的方案是手动编译一遍, 在编译时指定架构`archs=arm64`, 指定模式`-configuration Release`
@@ -86,7 +86,9 @@ xcodebuild -quiet \
 ```
 
 ## 3. 导入
+> 注意: 导入的本质是merge的过程, 必须要有diff才能生效. 因此project必须有Localizable.strings文件, 并且这个文件是localize过的(在比如en.lpro目录里)
 
+<div align=center><img src="./resource/add_localizable.png" width="60%" height="60%" alt="Product/Export Localizations"/></div>
 
 # 4. 参考
 

@@ -7,12 +7,11 @@ set -euo pipefail
 # 2. need arm64 archs
 # 3. in release mode
 
-xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO -configuration Debug \
+xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO -configuration Release \
   -workspace "Localization.xcworkspace" \
   -scheme "Localization" > /dev/null 2>&1
 
 xcodebuild \
   -workspace "Localization.xcworkspace" \
-  -scheme "Localization" \
   -importLocalizations \
   -localizationPath "./en.xliff"
