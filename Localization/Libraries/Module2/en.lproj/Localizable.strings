@@ -1,6 +1,0 @@
-/* Label say hello from module2 */
-"Hello from module2!" = "Hello from module2!";
-
-/* Label: text from module2 */
-"Text from module2" = "Text from module2";
-

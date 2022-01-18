@@ -28,6 +28,6 @@ public struct Module1View: View {
 
 struct Module1View_Previews: PreviewProvider {
     static var previews: some View {
-        Module1View().environment(\.locale, .init(identifier: "zh-Hans"))
+        Module1View()
     }
 }

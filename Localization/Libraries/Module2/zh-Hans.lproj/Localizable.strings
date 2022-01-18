@@ -1,9 +1,0 @@
-/* Label say hello from module2 */
-"Hello from module2!" = "你好来自module2!";
-
-/* Label: text from module2 */
-"Text from module2" = "文本来自module2";
-
-/* Label: text2 from module2 */
-"Text2 from module2" = "文本2来自module2";
-

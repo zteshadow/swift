@@ -7,7 +7,7 @@ set -euo pipefail
 # 2. need arm64 archs
 # 3. in release mode
 
-xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO -configuration Release \
+xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO -configuration Debug \
   -workspace "Localization.xcworkspace" \
   -scheme "Localization" > /dev/null 2>&1
 
@@ -15,4 +15,5 @@ xcodebuild -quiet \
   -workspace "Localization.xcworkspace" \
   -exportLocalizations \
   -localizationPath "export" \
-  -exportLanguage en
+  -exportLanguage en \
+  -exportLanguage zh-Hans

@@ -4,8 +4,8 @@
 
 - 使用合适的字符串格式, 用SwiftUI或者UIKit构建界面
 - 导出localization
-- 导入xliff文件
 - 添加多语言支持
+- 导入xliff文件
 - 整理添加可能的Plura字符串
 
 后续只需要重复2 -5 步骤即可. 下面详细介绍每个步骤.
@@ -66,7 +66,7 @@ Xcode(13.2.1)的exportLocalizations有2个问题:
 - 默认依赖`arm64`架构, `Release`模式(project设置有一项:`Use release for command-line build`, 指定scheme的除外), 但是无法指定.
 
 ### 2.3 解决方案
-解决的方案是手动编译一遍, 在编译时指定架构`archs=arm64`, 指定模式`-configuration Release`
+解决的方案是手动编译一遍, 在编译时指定架构`archs=arm64`, 指定模式`-configuration Release`(根据错误切换Debug还是Release)
 
 [script](./resource/export.sh):
 
@@ -85,17 +85,11 @@ xcodebuild -quiet \
   -exportLanguage en
 ```
 
-## 3. 导入
+## 3. 添加多语言支持
 
-> 注意: 导入的本质是merge的过程, 必须要有diff才能生效.
+### 3.1 拷贝
 
-因此有2个条件必备:
-1. project必须有`Localizable.strings`文件, 并且这个文件是localize过的(在比如`en.lproj`目录里)
-2. 有翻译发生 - 即`.xliff`文件中的`target`字符串有修改
-
-### 3.1 首次导入
-
-首次导入, 此时project里面还没有字符串文件, 可以直接把导出目录中的字符串文件加入到project中.
+由于目前project中还没有`Localizable.strings`文件, 需要从export目录中拷贝过来.
 
 ```bash
 cp -r export/en.xcloc/Source\ Contents/ ./
@@ -112,14 +106,25 @@ cp -r export/en.xcloc/Source\ Contents/ ./
 
 <div align=center><img src="./resource/add-string-localization.png" width="80%" height="80%" alt="Product/Export Localizations"/></div>
 
+## 4. 导入
 
-### 3.3 翻译导入
+> 注意: 导入的本质是merge的过程, 必须要有diff才能生效.
+
+因此有2个条件必备:
+1. project必须有`Localizable.strings`文件, 并且这个文件是localize过的(在比如`en.lproj`目录里)
+2. 有翻译发生 - 即`.xliff`文件中的`target`字符串有修改
 
 从导出的en.xliff拷贝一份zh-Hans.xliff文件, 翻译里面的字符串, 注意修改`target`, 然后导入.
 
 ```bash
 xcodebuild -workspace "Localization.xcworkspace" -importLocalizations -localizationPath ./zh-Hans.xliff
 ```
+
+## 5. Plura复数支持
+
+在自动生成的`Localizable.strings`文件中可以看到一些带`%lld, %d`的字符串, 很可能需要进行复数处理[官方文档](https://developer.apple.com/documentation/xcode/localizing-strings-that-contain-plurals).
+
+比如例子中的`%lld ticket(s)`就需要进行复数处理.
 
 # 4. 参考
 
