@@ -14,4 +14,4 @@ xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO -configuration Release \
 xcodebuild \
   -workspace "Localization.xcworkspace" \
   -importLocalizations \
-  -localizationPath "./en.xliff"
+  -localizationPath "zh-Hans.xliff"

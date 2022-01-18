@@ -1,0 +1,9 @@
+/* Label: quantities of tickets */
+"%lld ticket(s)" = "%lld ticket(s)";
+
+/* Label: show hello from module1 */
+"Hello from module1!" = "Hello from module1!";
+
+/* No comment provided by engineer. */
+"Hello text2 from module1" = "Hello text2 from module1";
+
