@@ -86,9 +86,13 @@ xcodebuild -quiet \
 ```
 
 ## 3. 导入
-> 注意: 导入的本质是merge的过程, 必须要有diff才能生效. 因此project必须有Localizable.strings文件, 并且这个文件是localize过的(在比如en.lpro目录里)
+> 注意: 导入的本质是merge的过程, 必须要有diff才能生效.
 
-<div align=center><img src="./resource/add_localizable.png" width="60%" height="60%" alt="Product/Export Localizations"/></div>
+因此有2个条件必备:
+1. project必须有`Localizable.strings`文件, 并且这个文件是localize过的(在比如`en.lproj`目录里)
+2. 有翻译发生 - 即`.xliff`文件中的`target`字符串有修改
+
+<div align=center><img src="./resource/add_localizable.png" width="80%" height="80%" alt="Product/Export Localizations"/></div>
 
 # 4. 参考
 
