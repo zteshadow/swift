@@ -15,6 +15,8 @@
 		19F8584627951A390044129B /* Module1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19236385278FD18F00A8F1D2 /* Module1.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		19F8584827951A3B0044129B /* Module2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1923638B278FD19B00A8F1D2 /* Module2.framework */; };
 		19F8584927951A3B0044129B /* Module2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1923638B278FD19B00A8F1D2 /* Module2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7E0CEBDA27964C0A00E9DE5B /* Localization-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E0CEBD627964C0A00E9DE5B /* Localization-InfoPlist.strings */; };
+		7E0CEBDB27964C0A00E9DE5B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E0CEBD827964C0A00E9DE5B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		19236345278FD02E00A8F1D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		19236380278FD18F00A8F1D2 /* Module1.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Module1.xcodeproj; path = ../Libraries/Module1/Module1.xcodeproj; sourceTree = "<group>"; };
 		19236386278FD19B00A8F1D2 /* Module2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Module2.xcodeproj; path = ../Libraries/Module2/Module2.xcodeproj; sourceTree = "<group>"; };
+		7E0CEBD727964C0A00E9DE5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Localization-InfoPlist.strings"; sourceTree = "<group>"; };
+		7E0CEBD927964C0A00E9DE5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		1923633D278FD02D00A8F1D2 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				7E0CEBD527964C0A00E9DE5B /* en.lproj */,
 				1923633E278FD02D00A8F1D2 /* LocalizationApp.swift */,
 				19236340278FD02D00A8F1D2 /* ContentView.swift */,
 				19236342278FD02E00A8F1D2 /* Assets.xcassets */,
@@ -146,6 +151,15 @@
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
+		};
+		7E0CEBD527964C0A00E9DE5B /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				7E0CEBD627964C0A00E9DE5B /* Localization-InfoPlist.strings */,
+				7E0CEBD827964C0A00E9DE5B /* Localizable.strings */,
+			);
+			path = en.lproj;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -235,6 +249,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E0CEBDA27964C0A00E9DE5B /* Localization-InfoPlist.strings in Resources */,
+				7E0CEBDB27964C0A00E9DE5B /* Localizable.strings in Resources */,
 				19236346278FD02E00A8F1D2 /* Preview Assets.xcassets in Resources */,
 				19236343278FD02E00A8F1D2 /* Assets.xcassets in Resources */,
 			);
@@ -266,6 +282,25 @@
 			targetProxy = 19236390278FD32C00A8F1D2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E0CEBD627964C0A00E9DE5B /* Localization-InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E0CEBD727964C0A00E9DE5B /* en */,
+			);
+			name = "Localization-InfoPlist.strings";
+			sourceTree = "<group>";
+		};
+		7E0CEBD827964C0A00E9DE5B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E0CEBD927964C0A00E9DE5B /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		19236347278FD02E00A8F1D2 /* Debug */ = {

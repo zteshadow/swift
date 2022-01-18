@@ -94,6 +94,17 @@ xcodebuild -quiet \
 
 <div align=center><img src="./resource/add_localizable.png" width="80%" height="80%" alt="Product/Export Localizations"/></div>
 
+### 3.1 首次导入
+
+首次导出, 此时project里面还没有字符串文件, 可以直接把导出目录中的字符串文件加入到project中.
+
+<div align=center><img src="./resource/cp_localizable.png" width="80%" height="80%" alt="Product/Export Localizations"/></div>
+
+然后添加到project文件中
+
+### 3.2 后续翻译导入
+
+
 # 4. 参考
 
 [官方文档](https://developer.apple.com/documentation/xcode/exporting-localizations)
