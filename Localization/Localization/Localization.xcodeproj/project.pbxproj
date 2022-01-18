@@ -76,6 +76,7 @@
 		7E0CEBF827965D6D00E9DE5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Localization-InfoPlist.strings"; sourceTree = "<group>"; };
 		7E0CEBFA27965D6D00E9DE5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		7E0CEBFD27965DC700E9DE5B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		7ECE92B627965F6200B978EB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../zh-Hans.lproj/Localization-InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +291,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7E0CEBF827965D6D00E9DE5B /* en */,
+				7ECE92B627965F6200B978EB /* zh-Hans */,
 			);
 			name = "Localization-InfoPlist.strings";
 			sourceTree = "<group>";
