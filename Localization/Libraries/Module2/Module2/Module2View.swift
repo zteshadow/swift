@@ -13,6 +13,7 @@ public struct Module2View: View {
         VStack {
             Text("Hello from module2!", comment: "Label say hello from module2")
             Text("Text from module2", comment: "Label: text from module2")
+            Text("Text2 from module2", comment: "Label: text2 from module2")
         }
     }
 }
