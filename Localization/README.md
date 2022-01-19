@@ -108,13 +108,14 @@ cp -r export/en.xcloc/Source\ Contents/ ./
 
 ## 4. 导入
 
+导出的`xliff`文件可以拿给翻译团队进行翻译了, 翻译完会生成对应的`de.xliff`, `zh-Hans.xliff`等文件, 把这些文件导入到工程即可.
+
 > 注意: 导入的本质是merge的过程, 必须要有diff才能生效.
 
 因此有2个条件必备:
 1. project必须有`Localizable.strings`文件, 并且这个文件是localize过的(在比如`en.lproj`目录里)
 2. 有翻译发生 - 即`.xliff`文件中的`target`字符串有修改
 
-从导出的en.xliff拷贝一份zh-Hans.xliff文件, 翻译里面的字符串, 注意修改`target`, 然后导入.
 
 ```bash
 xcodebuild -workspace "Localization.xcworkspace" -importLocalizations -localizationPath ./zh-Hans.xliff
@@ -125,6 +126,10 @@ xcodebuild -workspace "Localization.xcworkspace" -importLocalizations -localizat
 在自动生成的`Localizable.strings`文件中可以看到一些带`%lld, %d`的字符串, 很可能需要进行复数处理[官方文档](https://developer.apple.com/documentation/xcode/localizing-strings-that-contain-plurals).
 
 比如例子中的`%lld ticket(s)`就需要进行复数处理.
+
+## 6. Framework的多语言支持
+
+一般的项目中不同的模块有不同的framework
 
 # 4. 参考
 
