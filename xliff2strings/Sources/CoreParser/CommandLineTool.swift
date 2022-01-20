@@ -5,7 +5,7 @@
 //  Created by Liantao Song on 2022/1/20.
 //
 
-import Foundation
+import ArgumentParser
 
 public final class CommandLineTool {
     private let arguments: [String]
