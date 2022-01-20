@@ -1,6 +1,19 @@
-# 1. RadioGroup Picker
+# xliff2strings
 
-Compose a radio group picker for iOS, declared as below:
+A tool written in Swift, for merge `xliff` file into `Localizable.strings` and `Localizable.stringsdict`(create if not exist)
+
+```swift
+swift package init --type executeable
+```
+
+```swift
+swift build
+swift run
+```
+
+```swift
+swift package updat
+```
 
 ```swift
 struct RadioGroupPicker<SelectionValue, Content> where SelectionValue : Hashable, Content : View
