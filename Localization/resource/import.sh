@@ -11,7 +11,7 @@ xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO -configuration Release \
   -workspace "Localization.xcworkspace" \
   -scheme "Localization" > /dev/null 2>&1
 
-xcodebuild \
+xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO -configuration Release \
   -workspace "Localization.xcworkspace" \
   -importLocalizations \
-  -localizationPath "export/zh-Hans.xcloc/Localized Contents/zh-Hans.xliff"
+  -localizationPath "export/ru.xcloc/Localized Contents/ru.xliff"

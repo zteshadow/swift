@@ -1,9 +1,0 @@
-/* Label: quantities of tickets */
-"%lld ticket(s)" = "%lld 门票";
-
-/* Label: show hello from module1 */
-"Hello from module1!" = "你好, 来自module1!";
-
-/* No comment provided by engineer. */
-"Hello text2 from module1" = "你好, 文本2来自module1";
-

@@ -9,11 +9,11 @@ set -euo pipefail
 
 xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO -configuration Debug \
   -workspace "Localization.xcworkspace" \
-  -scheme "Localization" > /dev/null 2>&1
+  -scheme "Localization"
 
-xcodebuild -quiet \
+xcodebuild ARCHS=arm64 ONLY_ACTIVE_ARCH=NO -configuration Debug \
   -workspace "Localization.xcworkspace" \
+  -scheme "Localization" \
   -exportLocalizations \
-  -localizationPath "export" \
-  -exportLanguage en \
-  -exportLanguage zh-Hans
+  -localizationPath "export1" \
+  -exportLanguage en

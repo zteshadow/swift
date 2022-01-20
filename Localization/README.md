@@ -131,6 +131,10 @@ xcodebuild -workspace "Localization.xcworkspace" -importLocalizations -localizat
 
 一般的项目中不同的模块有不同的framework
 
+## 7. Screenshots
+
+
+
 # 4. 参考
 
 [官方文档](https://developer.apple.com/documentation/xcode/exporting-localizations)
