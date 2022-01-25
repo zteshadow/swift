@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SWXMLHash
 
 public class XliffParser {
     private let xliff: URL
@@ -17,5 +18,12 @@ public class XliffParser {
     }
 
     public func run() {
+        do {
+            let data = try Data.init(contentsOf: xliff)
+            let xml = XMLHash.parse(data)
+            print(xml)
+        } catch {
+            print(error)
+        }
     }
 }
