@@ -1,0 +1,47 @@
+{
+  "configurations" : [
+    {
+      "id" : "57158714-C471-47A4-9DC4-2B05FDFEDB9D",
+      "name" : "English",
+      "options" : {
+        "language" : "en",
+        "locationScenario" : {
+          "identifier" : "New York, NY, USA",
+          "referenceType" : "built-in"
+        },
+        "region" : "US"
+      }
+    },
+    {
+      "id" : "EAF4E641-9BF4-4BFB-9EA5-450D0967948E",
+      "name" : "Chinese",
+      "options" : {
+        "language" : "zh-Hans",
+        "locationScenario" : {
+          "identifier" : "Hong Kong, China",
+          "referenceType" : "built-in"
+        },
+        "region" : "CN"
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "areLocalizationScreenshotsEnabled" : true,
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Localization.xcodeproj",
+      "identifier" : "1923633A278FD02D00A8F1D2",
+      "name" : "Localization"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Localization.xcodeproj",
+        "identifier" : "7EA1F0ED27A0AEF9005CB469",
+        "name" : "LocalizationUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

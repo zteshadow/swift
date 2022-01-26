@@ -133,6 +133,8 @@ xcodebuild -workspace "Localization.xcworkspace" -importLocalizations -localizat
 
 ## 7. Screenshots
 
+[官方文档](https://developer.apple.com/documentation/xcode/creating-screenshots-of-your-app-for-localizers)
+
 
 
 # 4. 参考
