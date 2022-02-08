@@ -129,9 +129,26 @@ xcodebuild -workspace "Localization.xcworkspace" -importLocalizations -localizat
 
 > 需要进行复数处理, 是因为不同语言在处理不同数量时, 使用的表示方法不同, 比如中文中一个苹果与多个苹果都是 `苹果`, 而英文中有`apple`和`apples`的区别, 有些语言比如俄语, 阿拉伯语, 甚至一个, 两个, 三个的表示方式都是不同的.
 
-## 6. Framework的多语言支持
+## 6. 子模块的多语言支持
 
-一般的项目中不同的模块有不同的framework, 
+一般的项目中会包含多个模块, 每个模块都是单独的framework, 有自己的project, 因此导出的时候有自己的字符串文件.
+
+如果需要读取本module的字符串文件, 需要指定bundle, 方案可以参考swift package的方法:
+
+```swift
+import class Foundation.Bundle
+
+private class BundleFinder {}
+
+extension Foundation.Bundle {
+    /// Returns the resource bundle associated with the current Swift module.
+    static var module: Bundle = Bundle(for: BundleFinder.self)
+}
+
+...
+Text("Text3 from module1", bundle: .module, comment: "Label: show Text3 from module1")
+...
+```
 
 ## 7. Screenshots
 
