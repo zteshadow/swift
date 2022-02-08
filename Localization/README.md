@@ -2,11 +2,11 @@
 
 ## 0. 添加多语言支持的正确步骤
 
-- 使用合适的字符串格式, 用SwiftUI或者UIKit构建界面
-- 导出localization
-- 添加多语言支持
-- 导入xliff文件
-- 整理添加可能的Plura字符串
+- 1.使用合适的字符串格式, 用SwiftUI或者UIKit构建界面
+- 2.导出localization
+- 3.添加多语言支持
+- 4.导入xliff文件
+- 5.整理添加可能的Plura字符串
 
 后续只需要重复2 -5 步骤即可. 下面详细介绍每个步骤.
 
@@ -30,7 +30,7 @@ var text1 = String(localized: "\(count) ticket(s)", bundle: .main, comment: "Lab
 ```swift
 var text2: LocalizedStringKey = "Hello text2 from module1"
 ```
-注意方法3无法指定bundle, 方法1和方法2可以, 因此如果是定义在framework中的代码, 要使用自己的bundle, 可以使用方法1和2.
+注意方法3无法指定bundle, 因此如果是定义在framework中的代码, 要使用自己的bundle, 可以使用方法1和2.
 
 
 ## 2. 导出localization
@@ -49,7 +49,7 @@ xcodebuild \
 ```
 ### 2.2 可能的错误
 
-导出localization通常都会报莫名其妙的错误, 菜单导出的报错如下图:
+导出localization通常都会报莫名其妙的错误, 错误信息如下图:
 
 <div align=center><img src="./resource/error.png" width="80%" height="80%" alt="Product/Export Localizations"/></div>
 
@@ -102,7 +102,7 @@ cp -r export/en.xcloc/Source\ Contents/ ./
 > 1. 为project添加localization支持
 <div align=center><img src="./resource/add-localization.png" width="80%" height="80%" alt="Product/Export Localizations"/></div>
 
-> 2. 为每个字符串文件添加对应的localization
+> 2. 为字符串文件添加对应的localization
 
 <div align=center><img src="./resource/add-string-localization.png" width="80%" height="80%" alt="Product/Export Localizations"/></div>
 
@@ -123,22 +123,31 @@ xcodebuild -workspace "Localization.xcworkspace" -importLocalizations -localizat
 
 ## 5. Plura复数支持
 
-在自动生成的`Localizable.strings`文件中可以看到一些带`%lld, %d`的字符串, 很可能需要进行复数处理[官方文档](https://developer.apple.com/documentation/xcode/localizing-strings-that-contain-plurals).
+在自动生成的`Localizable.strings`文件中可以看到一些带`%lld, %d`的字符串, 需要进行复数处理([官方文档](https://developer.apple.com/documentation/xcode/localizing-strings-that-contain-plurals)).
 
 比如例子中的`%lld ticket(s)`就需要进行复数处理.
 
+> 需要进行复数处理, 是因为不同语言在处理不同数量时, 使用的表示方法不同, 比如中文中一个苹果与多个苹果都是 `苹果`, 而英文中有`apple`和`apples`的区别, 有些语言比如俄语, 阿拉伯语, 甚至一个, 两个, 三个的表示方式都是不同的.
+
 ## 6. Framework的多语言支持
 
-一般的项目中不同的模块有不同的framework
+一般的项目中不同的模块有不同的framework, 
 
 ## 7. Screenshots
 
 [官方文档](https://developer.apple.com/documentation/xcode/creating-screenshots-of-your-app-for-localizers)
 
+[About screenshot](https://rderik.com/blog/understanding-xcuitest-screenshots-and-how-to-access-them/)
+
+### 7.1 UI test
+
+### 7.2 Test plan
 
 
 # 4. 参考
 
 [官方文档](https://developer.apple.com/documentation/xcode/exporting-localizations)
+
+[About screenshot](https://rderik.com/blog/understanding-xcuitest-screenshots-and-how-to-access-them/)
 
 [WWDC2021](https://developer.apple.com/videos/play/wwdc2021/10220/)
