@@ -17,9 +17,6 @@
 		19F8584927951A3B0044129B /* Module2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1923638B278FD19B00A8F1D2 /* Module2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7EA1F0F127A0AEF9005CB469 /* LocalizationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1F0F027A0AEF9005CB469 /* LocalizationUITests.swift */; };
 		7EA1F0F327A0AEF9005CB469 /* LocalizationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1F0F227A0AEF9005CB469 /* LocalizationUITestsLaunchTests.swift */; };
-		7EA1F10027A0B1BD005CB469 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EA1F10227A0B1BD005CB469 /* Localizable.strings */; };
-		7EA1F10527A0B1CB005CB469 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 7EA1F10727A0B1CB005CB469 /* Localizable.stringsdict */; };
-		7EA1F10A27A0B1D2005CB469 /* Localization-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EA1F10C27A0B1D2005CB469 /* Localization-InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,15 +83,6 @@
 		7EA1F0EE27A0AEF9005CB469 /* LocalizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalizationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA1F0F027A0AEF9005CB469 /* LocalizationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationUITests.swift; sourceTree = "<group>"; };
 		7EA1F0F227A0AEF9005CB469 /* LocalizationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7EA1F10127A0B1BD005CB469 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		7EA1F10327A0B1BF005CB469 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7EA1F10427A0B1C0005CB469 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7EA1F10627A0B1CB005CB469 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
-		7EA1F10827A0B1CC005CB469 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		7EA1F10927A0B1CD005CB469 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		7EA1F10B27A0B1D2005CB469 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Localization-InfoPlist.strings"; sourceTree = "<group>"; };
-		7EA1F10D27A0B1D3005CB469 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localization-InfoPlist.strings"; sourceTree = "<group>"; };
-		7EA1F10E27A0B1D4005CB469 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "ru.lproj/Localization-InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,9 +181,6 @@
 		7EA1F0F927A0B19F005CB469 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				7EA1F10C27A0B1D2005CB469 /* Localization-InfoPlist.strings */,
-				7EA1F10227A0B1BD005CB469 /* Localizable.strings */,
-				7EA1F10727A0B1CB005CB469 /* Localizable.stringsdict */,
 			);
 			path = Resource;
 			sourceTree = SOURCE_ROOT;
@@ -313,10 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EA1F10A27A0B1D2005CB469 /* Localization-InfoPlist.strings in Resources */,
-				7EA1F10027A0B1BD005CB469 /* Localizable.strings in Resources */,
 				19236346278FD02E00A8F1D2 /* Preview Assets.xcassets in Resources */,
-				7EA1F10527A0B1CB005CB469 /* Localizable.stringsdict in Resources */,
 				19236343278FD02E00A8F1D2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,39 +350,6 @@
 			targetProxy = 7EA1F0F427A0AEF9005CB469 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		7EA1F10227A0B1BD005CB469 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7EA1F10127A0B1BD005CB469 /* zh-Hans */,
-				7EA1F10327A0B1BF005CB469 /* en */,
-				7EA1F10427A0B1C0005CB469 /* ru */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		7EA1F10727A0B1CB005CB469 /* Localizable.stringsdict */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7EA1F10627A0B1CB005CB469 /* zh-Hans */,
-				7EA1F10827A0B1CC005CB469 /* en */,
-				7EA1F10927A0B1CD005CB469 /* ru */,
-			);
-			name = Localizable.stringsdict;
-			sourceTree = "<group>";
-		};
-		7EA1F10C27A0B1D2005CB469 /* Localization-InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7EA1F10B27A0B1D2005CB469 /* en */,
-				7EA1F10D27A0B1D3005CB469 /* zh-Hans */,
-				7EA1F10E27A0B1D4005CB469 /* ru */,
-			);
-			name = "Localization-InfoPlist.strings";
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		19236347278FD02E00A8F1D2 /* Debug */ = {

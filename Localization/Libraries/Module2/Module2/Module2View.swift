@@ -12,7 +12,7 @@ public struct Module2View: View {
     private var pluralText: String
 
     public init() {
-        pluralText = String(localized: "Text1: \(count) ticket(s) from module2", comment: "Label: amount of tickets")
+        pluralText = String(localized: "Text4: \(count) ticket(s) from module2", comment: "Label: amount of tickets")
     }
     public var body: some View {
         VStack {

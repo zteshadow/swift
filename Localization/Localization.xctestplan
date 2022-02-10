@@ -9,9 +9,7 @@
           "identifier" : "New York, NY, USA",
           "referenceType" : "built-in"
         },
-        "region" : "US",
-        "uiTestingScreenshotsLifetime" : "keepAlways",
-        "userAttachmentLifetime" : "keepAlways"
+        "region" : "US"
       }
     },
     {
@@ -23,9 +21,7 @@
           "identifier" : "Hong Kong, China",
           "referenceType" : "built-in"
         },
-        "region" : "CN",
-        "uiTestingScreenshotsLifetime" : "keepAlways",
-        "userAttachmentLifetime" : "keepAlways"
+        "region" : "CN"
       }
     }
   ],

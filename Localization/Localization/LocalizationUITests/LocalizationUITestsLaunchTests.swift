@@ -5,6 +5,7 @@
 //  Created by samuelsong on 2022/1/26.
 //
 
+#if false
 import XCTest
 
 class LocalizationUITestsLaunchTests: XCTestCase {
@@ -30,3 +31,4 @@ class LocalizationUITestsLaunchTests: XCTestCase {
         add(attachment)
     }
 }
+#endif

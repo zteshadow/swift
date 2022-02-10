@@ -16,6 +16,7 @@ struct LocalizationApp: App {
             VStack {
                 Module1View()
                 Module2View()
+                ContentView()
             }
         }
     }
