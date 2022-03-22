@@ -11,7 +11,8 @@ import SwiftUI
 struct RadioGroupPickerApp: App {
     var body: some Scene {
         WindowGroup {
-            CurrentPicker()
+            //CurrentPicker()
+            SimpleTest()
         }
     }
 }

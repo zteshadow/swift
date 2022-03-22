@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0E222F27E942540088E62E /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E222E27E942540088E62E /* Button+Extension.swift */; };
+		7E0E223127E9433B0088E62E /* View+Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E223027E9433B0088E62E /* View+Select.swift */; };
+		7E8D43F827E2B46100071F87 /* RadioGroupPicker+Simple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D43F727E2B46100071F87 /* RadioGroupPicker+Simple.swift */; };
+		7E8D43FA27E2BBFB00071F87 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D43F927E2BBFB00071F87 /* View+Extension.swift */; };
 		7EAC2590278A497200FA1FFE /* RadioGroupPickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC258F278A497200FA1FFE /* RadioGroupPickerApp.swift */; };
 		7EAC2592278A497200FA1FFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC2591278A497200FA1FFE /* ContentView.swift */; };
 		7EAC2594278A497600FA1FFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EAC2593278A497600FA1FFE /* Assets.xcassets */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E0E222E27E942540088E62E /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
+		7E0E223027E9433B0088E62E /* View+Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Select.swift"; sourceTree = "<group>"; };
+		7E8D43F727E2B46100071F87 /* RadioGroupPicker+Simple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioGroupPicker+Simple.swift"; sourceTree = "<group>"; };
+		7E8D43F927E2BBFB00071F87 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		7EAC258C278A497200FA1FFE /* RadioGroupPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioGroupPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAC258F278A497200FA1FFE /* RadioGroupPickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioGroupPickerApp.swift; sourceTree = "<group>"; };
 		7EAC2591278A497200FA1FFE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +64,10 @@
 				7EAC258F278A497200FA1FFE /* RadioGroupPickerApp.swift */,
 				7EAC2591278A497200FA1FFE /* ContentView.swift */,
 				7EAC259D278A4B3000FA1FFE /* CurrentPicker.swift */,
+				7E8D43F727E2B46100071F87 /* RadioGroupPicker+Simple.swift */,
+				7E8D43F927E2BBFB00071F87 /* View+Extension.swift */,
+				7E0E222E27E942540088E62E /* Button+Extension.swift */,
+				7E0E223027E9433B0088E62E /* View+Select.swift */,
 				7EAC2593278A497600FA1FFE /* Assets.xcassets */,
 				7EAC2595278A497600FA1FFE /* Preview Content */,
 			);
@@ -141,8 +153,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EAC259E278A4B3000FA1FFE /* CurrentPicker.swift in Sources */,
+				7E0E223127E9433B0088E62E /* View+Select.swift in Sources */,
 				7EAC2592278A497200FA1FFE /* ContentView.swift in Sources */,
+				7E8D43FA27E2BBFB00071F87 /* View+Extension.swift in Sources */,
 				7EAC2590278A497200FA1FFE /* RadioGroupPickerApp.swift in Sources */,
+				7E8D43F827E2B46100071F87 /* RadioGroupPicker+Simple.swift in Sources */,
+				7E0E222F27E942540088E62E /* Button+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
