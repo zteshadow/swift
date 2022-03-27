@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// maintain the relationship between View and coresponding radio tag
 struct RadioGroupItem<SelectionValue> where SelectionValue: Hashable {
     var content: AnyView
     var tag: SelectionValue
@@ -50,35 +51,37 @@ struct RadioGroupPickerSimple<SelectionValue>: View where SelectionValue: Hashab
             .selected(isSelected: self.selection == item.tag)
             .padding()
             item.content
-            Spacer() /// expand touch area
-        }.contentShape(Rectangle())
+            Spacer() /// expand touch area to whole line
+        }.contentShape(Rectangle()) /// expand touch area
     }
 }
 
-#if DEBUG
-
-struct SimpleTest: View {
-    @State private var selected: Flavor = .vanilla {
-        didSet {
-            print("\(selected)")
-        }
-    }
-
-    var body: some View {
-        RadioGroupPickerSimple("RadioGroupTitle", selection: $selected) {
-            [
-                Text("Chocolate").radioTag(Flavor.chocolate),
-                Text("Vanilla").radioTag(Flavor.vanilla),
-                Text("Strawberry").radioTag(Flavor.strawberry)
-            ]
-        }
+fileprivate extension View {
+    func radioTag<SelectionValue: Hashable>(_ tag: SelectionValue) -> RadioGroupItem<SelectionValue> {
+        return RadioGroupItem(content: AnyView(self), tag: tag)
     }
 }
 
-struct RadioGroupPicker_Simple_Previews: PreviewProvider {
+struct RadioGroupPickerSimplePreviews: PreviewProvider {
+    struct SimpleTest: View {
+        @State private var selected: Flavor = .vanilla {
+            didSet {
+                print("\(selected)")
+            }
+        }
+
+        var body: some View {
+            RadioGroupPickerSimple("RadioGroupTitle", selection: $selected) {
+                [
+                    Text("Chocolate").radioTag(Flavor.chocolate),
+                    Text("Vanilla").radioTag(Flavor.vanilla),
+                    Text("Strawberry").radioTag(Flavor.strawberry)
+                ]
+            }
+        }
+    }
+
     static var previews: some View {
         SimpleTest()
     }
 }
-
-#endif

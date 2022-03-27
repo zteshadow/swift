@@ -12,7 +12,7 @@ struct RadioGroupPickerApp: App {
     var body: some Scene {
         WindowGroup {
             //CurrentPicker()
-            SimpleTest()
+            RadioGroupPickerSimplePreviews.SimpleTest()
         }
     }
 }
