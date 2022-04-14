@@ -13,12 +13,21 @@ struct RootView: View {
     var body: some View {
         TabView(selection: $viewModel.selected) {
             ForEach (viewModel.tabList) { item in
-                Text(item.title)
+                tabView(item)
                     .tabItem {
                         item.image
                         Text(item.title)
                 }
             }
+        }
+    }
+
+    func tabView(_ item: RootViewModelItem) -> some View {
+        NavigationView {
+            ZStack {
+                item.backgroundColor
+                Text(item.title)
+            }.navigationTitle(item.title)
         }
     }
 }
