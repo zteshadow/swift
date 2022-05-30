@@ -17,6 +17,7 @@
 		19F8584927951A3B0044129B /* Module2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1923638B278FD19B00A8F1D2 /* Module2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7E67AB7127B5D7B200766D5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E67AB7327B5D7B200766D5C /* Localizable.strings */; };
 		7E67AB7827B5D7C700766D5C /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 7E67AB7A27B5D7C700766D5C /* Localizable.stringsdict */; };
+		7E67AB7F27B5E2C500766D5C /* Localization-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E67AB8127B5E2C500766D5C /* Localization-InfoPlist.strings */; };
 		7EA1F0F127A0AEF9005CB469 /* LocalizationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1F0F027A0AEF9005CB469 /* LocalizationUITests.swift */; };
 		7EA1F0F327A0AEF9005CB469 /* LocalizationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1F0F227A0AEF9005CB469 /* LocalizationUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,9 @@
 		7E67AB7927B5D7C700766D5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		7E67AB7B27B5D7C900766D5C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		7E67AB7C27B5D7CA00766D5C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		7E67AB8027B5E2C500766D5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Localization-InfoPlist.strings"; sourceTree = "<group>"; };
+		7E67AB8227B5E2C700766D5C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "ru.lproj/Localization-InfoPlist.strings"; sourceTree = "<group>"; };
+		7E67AB8327B5E2C800766D5C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localization-InfoPlist.strings"; sourceTree = "<group>"; };
 		7EA1F0EE27A0AEF9005CB469 /* LocalizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalizationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA1F0F027A0AEF9005CB469 /* LocalizationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationUITests.swift; sourceTree = "<group>"; };
 		7EA1F0F227A0AEF9005CB469 /* LocalizationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 			children = (
 				7E67AB7327B5D7B200766D5C /* Localizable.strings */,
 				7E67AB7A27B5D7C700766D5C /* Localizable.stringsdict */,
+				7E67AB8127B5E2C500766D5C /* Localization-InfoPlist.strings */,
 			);
 			path = Resource;
 			sourceTree = SOURCE_ROOT;
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19236346278FD02E00A8F1D2 /* Preview Assets.xcassets in Resources */,
+				7E67AB7F27B5E2C500766D5C /* Localization-InfoPlist.strings in Resources */,
 				7E67AB7827B5D7C700766D5C /* Localizable.stringsdict in Resources */,
 				7E67AB7127B5D7B200766D5C /* Localizable.strings in Resources */,
 				19236343278FD02E00A8F1D2 /* Assets.xcassets in Resources */,
@@ -382,6 +388,16 @@
 				7E67AB7C27B5D7CA00766D5C /* ru */,
 			);
 			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
+		7E67AB8127B5E2C500766D5C /* Localization-InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E67AB8027B5E2C500766D5C /* en */,
+				7E67AB8227B5E2C700766D5C /* ru */,
+				7E67AB8327B5E2C800766D5C /* zh-Hans */,
+			);
+			name = "Localization-InfoPlist.strings";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
