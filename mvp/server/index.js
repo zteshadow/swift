@@ -1,5 +1,6 @@
 
-const http = require('http')
+const express = require("express")
+const app = express()
 
 let notes = [
   {
@@ -21,11 +22,28 @@ let notes = [
     important: true
   }
 ]
-const app = http.createServer((request, response) => {
-  response.writeHead(200, { 'Content-Type': 'application/json' })
-  response.end(JSON.stringify(notes))
+
+// soccer club list
+app.get('/api/clubs', (request, response) => {
+    response.send('soccer list')
+})
+
+app.get('/api/clubs/:id', (request, response) => {
+    response.send('soccer detail')
+})
+
+app.get('/api/books', (request, response) => {
+    response.send('book list')
+})
+
+app.get('/api/books/:id', (request, response) => {
+    const id = request.params.id
+    console.log("book id: ", id);
+    
+    response.send('book detail')
 })
 
 const PORT = 3001
-app.listen(PORT)
-console.log(`Server running on port ${PORT}`)
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`)
+})
